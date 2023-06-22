@@ -4,7 +4,7 @@ dotEnv.config();
 
 
 const connectDB = async () => {
-  const conn = await mongoose.connect("mongodb+srv://mb1412:Kaitou@cluster0.aiqlokr.mongodb.net/");
+  const conn = await mongoose.connect(process.env.MONGO_DB_URL);
   console.log(`mongo connected: ${conn.connection.host}`);
 };
 
